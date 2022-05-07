@@ -5,7 +5,7 @@ step "Run a Script" {
         notes = "~"
         properties = {
             Octopus.Action.RunOnServer = "true"
-            Octopus.Action.Script.ScriptBody = "Write-Host \"Hello, World!\""
+            Octopus.Action.Script.ScriptBody = "Write-Host $OctopusParameters[\"Hello, World!\"]"
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "PowerShell"
         }
